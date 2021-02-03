@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
+  A,
   DivMain,
   DivNew,
   DivNewContain,
   H2,
   Img,
   P,
+  DivMore,
 } from "../styled-components/MainPage";
 import Sidebar from "./Sidebar";
 
@@ -46,6 +48,9 @@ export default function MainPage() {
             ))}
           </>
         )}
+        <DivMore>
+          <A href="#">More news</A>
+        </DivMore>
       </div>
     </DivMain>
   );
