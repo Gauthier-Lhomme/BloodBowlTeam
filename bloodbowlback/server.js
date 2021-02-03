@@ -8,7 +8,7 @@ app.use(cors());
 
 app.get("/news", (req, res) => {
   db.query(
-    `SELECT title_article, content_article, image_new FROM news_bb`,
+    `SELECT title_article, content_article, image_new FROM news_bb ORDER BY id DESC LIMIT 3`,
     (error, result) => {
       if (error) {
         return res.status(500).send("Error");
