@@ -18,6 +18,18 @@ app.get("/news", (req, res) => {
   );
 });
 
+app.get("/allnews", (req, res) => {
+  db.query(
+    `SELECT title_article, content_article, image_new FROM news_bb ORDER BY id DESC`,
+    (error, result) => {
+      if (error) {
+        return res.status(500).send("Error");
+      }
+      return res.json(result);
+    }
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
