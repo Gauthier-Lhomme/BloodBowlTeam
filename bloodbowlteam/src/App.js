@@ -9,7 +9,7 @@ function App() {
     <AppDiv>
       <Reset />
       <Navbar />
-      <News />
+      <MainPage />
     </AppDiv>
   );
 }
