@@ -39,12 +39,12 @@ app.get("/teams", (req, res) => {
   });
 });
 
-
 app.get("/teams/:id", (req, res) => {
   const id = req.params.id;
   db.query(
     `SELECT race_name, race_description, race_strengths, race_weaknesses FROM races
-WHERE id = ?`,[id],
+WHERE id = ?`,
+    [id],
     (error, result) => {
       if (error) {
         return res.status(500).send("Error");
@@ -63,7 +63,8 @@ app.get("/players/:id", (req, res) => {
     JOIN roles ON roles.id = players.roles_id
     JOIN skills s ON s.id = players.skills_id
     JOIN stats ON stats.id = players.stats_id
-    WHERE r.id = ?`,[id],
+    WHERE r.id = ?`,
+    [id],
     (error, result) => {
       if (error) {
         return res.status(500).send("Error");

@@ -17,5 +17,5 @@ export const P = styled.p`
 
 export const Img = styled.img`
   width: 35vh;
-  padding-top: 57vh;
+  padding-top: 230%;
 `;
