@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bloodbowl from "../assets/image/bloodbowl.jpeg";
 export const Div = styled.div``;
 
 export const H1 = styled.h1`

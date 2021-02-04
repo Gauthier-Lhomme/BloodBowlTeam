@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import { Reset } from "styled-reset";
+import Footer from "./components/Footer";
 import HumanPage from "./components/HumanPage";
 import MainPage from "./components/MainPage";
 import Navbar from "./components/Navbar";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/teams" component={Teams} />
         <Route path="/human" component={HumanPage} />
       </Switch>
+      <Footer />
     </AppDiv>
   );
 }

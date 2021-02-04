@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
-  A,
   DivMain,
   DivNew,
   DivNewContain,
