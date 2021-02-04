@@ -39,6 +39,41 @@ app.get("/teams", (req, res) => {
   });
 });
 
+app.get("/teams/:id", (req, res) => {
+  const id = req.params.id;
+  db.query(
+    `SELECT race_name, race_description, race_strengths, race_weaknesses FROM races
+WHERE id = ?`,
+    [id],
+    (error, result) => {
+      if (error) {
+        return res.status(500).send("Error");
+      }
+      return res.json(result);
+    }
+  );
+});
+
+app.get("/players/:id", (req, res) => {
+  const id = req.params.id;
+  db.query(
+    `SELECT p.price, r.race_name, roles.role_name, stats.m, stats.f, stats.ag, stats.va FROM players
+    JOIN prices p ON p.id = players.prices_id
+    JOIN races r ON r.id = players.races_id
+    JOIN roles ON roles.id = players.roles_id
+    JOIN skills s ON s.id = players.skills_id
+    JOIN stats ON stats.id = players.stats_id
+    WHERE r.id = ?`,
+    [id],
+    (error, result) => {
+      if (error) {
+        return res.status(500).send("Error");
+      }
+      return res.json(result);
+    }
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });

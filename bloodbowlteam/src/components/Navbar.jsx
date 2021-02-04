@@ -16,13 +16,13 @@ export default function Navbar() {
         <nav>
           <ul>
             <Li>
-              <LinkNav to="/">Menu</LinkNav>
+              <LinkNav to="/">Home</LinkNav>
             </Li>
             <Li>
               <LinkNav to="/news">News</LinkNav>
             </Li>
             <Li>
-              <LinkNav to="/teams">Les Races</LinkNav>
+              <LinkNav to="/teams">Races</LinkNav>
             </Li>
             <Li>
               <LinkNav to="/">FAQ</LinkNav>
