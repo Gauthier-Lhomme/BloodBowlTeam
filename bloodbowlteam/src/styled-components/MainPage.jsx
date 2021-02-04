@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const DivMain = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ export const Img = styled.img`
   width: 20vh;
 `;
 
-export const A = styled.a`
+export const LinkNews = styled(Link)`
   font-size: 26px;
   color: black;
 `;
