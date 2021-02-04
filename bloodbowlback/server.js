@@ -30,6 +30,15 @@ app.get("/allnews", (req, res) => {
   );
 });
 
+app.get("/teams", (req, res) => {
+  db.query(`SELECT race_name, image_race  FROM races`, (error, result) => {
+    if (error) {
+      return res.status(500).send("Error");
+    }
+    return res.json(result);
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
