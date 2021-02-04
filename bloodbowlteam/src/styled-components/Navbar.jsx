@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const DivTitle = styled.div`
   background-color: #980000;
@@ -20,7 +21,7 @@ export const H1 = styled.h1`
   color: white;
   font-size: 7vh;
 `;
-export const A = styled.a`
+export const LinkNav = styled(Link)`
   text-decoration: none;
   color: white;
   font-size: 4vh;
