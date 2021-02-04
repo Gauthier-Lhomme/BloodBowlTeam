@@ -1,4 +1,10 @@
-import { DivMenu, DivTitle, H1, Li, A } from "../styled-components/Navbar";
+import {
+  DivMenu,
+  DivTitle,
+  H1,
+  Li,
+  LinkNav,
+} from "../styled-components/Navbar";
 
 export default function Navbar() {
   return (
@@ -10,16 +16,16 @@ export default function Navbar() {
         <nav>
           <ul>
             <Li>
-              <A href="#">Menu</A>
+              <LinkNav to="/">Menu</LinkNav>
             </Li>
             <Li>
-              <A href="#">News</A>
+              <LinkNav to="/news">News</LinkNav>
             </Li>
             <Li>
-              <A href="#">Les Races</A>
+              <LinkNav to="/teams">Les Races</LinkNav>
             </Li>
             <Li>
-              <A href="#">FAQ</A>
+              <LinkNav to="/">FAQ</LinkNav>
             </Li>
           </ul>
         </nav>

@@ -9,6 +9,7 @@ import {
   Img,
   P,
   DivMore,
+  LinkNews,
 } from "../styled-components/MainPage";
 import Sidebar from "./Sidebar";
 
@@ -49,7 +50,7 @@ export default function MainPage() {
           </>
         )}
         <DivMore>
-          <A href="#">More news</A>
+          <LinkNews to="/news">More news</LinkNews>
         </DivMore>
       </div>
     </DivMain>
