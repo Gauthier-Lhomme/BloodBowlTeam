@@ -1,4 +1,3 @@
-import Sidebar from "./Sidebar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { H2, H3, A, Img, Race } from "../styled-components/Team";
